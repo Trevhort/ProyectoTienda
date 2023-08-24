@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap');
+/* Estilo personalizado para el título */
+h1.titulo,
+h3.titulo {
+    text-align: center; /* Centrar el título */
+    margin-top: 30px; /* Espacio en la parte superior del título */
+  }
+  h3.titulo {
+    text-align: center; /* Centrar el título */
+    margin-top: 30px; /* Espacio en la parte superior del título */
+  }
+  
+  /* Fondo de página en azul eléctrico tenue */
+  body {
+    background-color: #656565b0; /* Azul eléctrico tenue */
+    margin: 0; /* Eliminar margen predeterminado del cuerpo */
+    padding: 0; /* Eliminar relleno predeterminado del cuerpo */
+  }
+  .encabezado {
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+    margin: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.574);
+    border-top-left-radius: 400px 200px;
+    border-bottom-right-radius: 400px 200px;
+}
+  a.encabezado {
+    background-color: #5c7a92cc;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-top-left-radius: 450px 200px;
+    border-bottom-right-radius: 100px 100px;
+    transition: transform 0.3s; /* Agregar una transición suave */
+    color: rgb(0, 0, 0);
+  }
+  a.encabezado:hover {
+    transform: scale(1.5); /* Escala la imagen al 120% en el estado de "hover" */
+    font-weight: 700;
+  }
+/* Estilos para el enlace de cerrar sesión */
+.encabezadoCerrar {
+  padding: 20px;
+  background-color: #d30b0b3f;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 100px;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.5s ease; /* Agregar transición de color de fondo */
+}
+
+.encabezadoCerrar.agrandar {
+  display: inline-block; /* Asegura que se aplique el escalado */
+  background-color: #c0090995;
+}
+
+/* Al pasar el cursor sobre el enlace */
+.encabezadoCerrar:hover {
+  background-color: #e40707ee;
+}
+.bolder {
+    font-weight: 700;
+    border: 2px solid #000000; /* Grosor y estilo del borde */
+    background-color: rgba(236, 236, 236, 0.089); /* Color de fondo con transparencia */
+    padding: 5px 10px; /* Espaciado dentro del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Para que ocupe solo el ancho del contenido */
+}
+.agrandar {
+  transition: transform 0.3s; /* Agregar transición suave */
+}
+.agrandar:hover {
+  transform: scale(1.5); /* Agranda el enlace al pasar el cursor */
+}
+/* Estilos específicos para el enlace de cerrar sesión */
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  background-color: #656565b0;
+  border-bottom: 1px solid #000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  padding: 10px;
+  flex: 1; /* Distribuir el espacio disponible de manera uniforme */
+  text-align: center; /* Centrar el contenido horizontalmente */
+  border-right: 1px solid #000; /* Agregar separadores entre enlaces */
+}
+
+.navbar a:last-child {
+  border-right: none; /* Quitar el separador del último enlace */
+}
+
+.navbar a:hover {
+  color: #72bfe2;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  margin-left: 50px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.dropbtn:hover {
+  color: #72bfe2;
+}
+
+.dropdown-content {
+  padding: 5px;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.574);
+  border-radius: 5px;
+  top: 100%; /* Alinear con la parte inferior del div padre */
+  left: 0; /* Alinear con la izquierda del div padre */
+  width: 180px; /* Ancho del menú desplegable */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  text-align: left;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+.dropdown-content a:hover {
+  color: #72bfe2;
+}

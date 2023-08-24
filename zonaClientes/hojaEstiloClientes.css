@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap');
+/* Estilo personalizado para el título */
+  h1.titulo,
+  h3.titulo {
+    text-align: center; /* Centrar el título */
+    margin-top: 30px; /* Espacio en la parte superior del título */
+}
+/* Fondo de página en azul eléctrico tenue */
+body {
+    font-family: 'Gentium Plus', serif;
+    background-color: #72bfe2; /* Azul eléctrico tenue */
+    margin: 0; /* Eliminar margen predeterminado del cuerpo */
+    padding: 0; /* Eliminar relleno predeterminado del cuerpo */
+}
+  .encabezado {
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+    margin: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.574);
+    border-top-left-radius: 400px 200px;
+    border-bottom-right-radius: 400px 200px;
+}
+  a.encabezado {
+    background-color: #72bfe2;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-top-left-radius: 450px 200px;
+    border-bottom-right-radius: 100px 100px;
+    transition: transform 0.3s; /* Agregar una transición suave */
+    color: rgb(0, 0, 0);
+  }
+  a.encabezado:hover {
+    transform: scale(1.5); /* Escala la imagen al 120% en el estado de "hover" */
+    font-weight: 700;
+  }
+  .encabezadoCerrar {
+    padding: 20px;
+    background-color: #72bfe2;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+  }
+  .carrito {
+    height: 50px;
+    width: 50px;
+    background-color: #72bfe2;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;    
+    transition: transform 0.3s; /* Agregar transición suave */
+  }
+  .carrito:hover {
+    transform: scale(1.5); /* Agranda la caja al pasar el cursor */
+  }
+  .carritoImg {
+    max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+    max-height: 100%; /* Ajustar el tamaño máximo de la imagen */
+    vertical-align: middle; /* Centrar verticalmente la imagen */
+  }
+  .bolder {
+    font-weight: 700;
+    border: 2px solid #72bfe2; /* Grosor y estilo del borde */
+    background-color: rgba(114, 191, 226, 0.2); /* Color de fondo con transparencia */
+    padding: 5px 10px; /* Espaciado dentro del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Para que ocupe solo el ancho del contenido */
+}
+.agrandar {
+  transition: transform 0.3s; /* Agregar transición suave */
+}
+.agrandar:hover {
+  transform: scale(1.5); /* Agranda el enlace al pasar el cursor */
+}
+/* Estilos específicos para el enlace de cerrar sesión */
+.encabezadoCerrar.agrandar {
+  display: inline-block; /* Asegura que se aplique el escalado */
+}

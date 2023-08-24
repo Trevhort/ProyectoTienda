@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.342); /* Blanco más tenue con opacidad */
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de datos */
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}

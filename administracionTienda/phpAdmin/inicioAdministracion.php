@@ -1,14 +1,14 @@
 <?php
+include("C:/wamp64/www/Tienda/conexionPHP.php");
+include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
 
-include("../conexionPHP.php");
-include("../verificacionUsuarioConectado.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="hojaEstiloAdmin.css">
+    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdmin.css">
     <title>Panel de Administración</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ include("../verificacionUsuarioConectado.php");
           <a class="encabezado encabezado3" href="stockProductos.php">&nbsp Stock Productos</a>
         <?php
           if ($usuarioConectado) {
-              echo '<a class="encabezadoCerrar agrandar" href="../cerrarSesion.php">Cerrar Sesión</a>';
+              echo '<a class="encabezadoCerrar agrandar" href="../../cerrarSesion.php">Cerrar Sesión</a>';
               echo "<a><br></a>";
               echo "<p class='bolder'>Bienvenido, $nombreUsuario</p>";
           } else {

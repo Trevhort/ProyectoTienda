@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['user_tipo'])) {
     if ($_SESSION['user_tipo'] == 'administrador') {
-        header("Location: administracionTienda/inicioAdministracion.php");
+        header("Location: administracionTienda/phpAdmin/inicioAdministracion.php");
         exit();
     } elseif ($_SESSION['user_tipo'] == 'cliente') {
         header("Location: zonaClientes/inicioClientes.php");

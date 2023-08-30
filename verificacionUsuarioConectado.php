@@ -1,5 +1,6 @@
 <?php
-include("../conexionPHP.php");
+include("C:/wamp64/www/Tienda/conexionPHP.php");
+
 session_start();
 
 $usuarioConectado = false;

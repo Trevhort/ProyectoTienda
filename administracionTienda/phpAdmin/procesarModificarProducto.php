@@ -1,6 +1,6 @@
 <?php
-include("../conexionPHP.php");
-include("../verificacionUsuarioConectado.php");
+include("C:/wamp64/www/Tienda/conexionPHP.php");
+include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario

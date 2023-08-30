@@ -1,5 +1,6 @@
 <?php
-include("../conexionPHP.php");
+include("C:/wamp64/www/Tienda/conexionPHP.php");
+include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["idProducto"])) {
     $idProducto = $_GET["idProducto"];

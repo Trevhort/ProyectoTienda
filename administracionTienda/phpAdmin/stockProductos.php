@@ -1,17 +1,20 @@
 <?php
-include("../conexionPHP.php");
-include("../verificacionUsuarioConectado.php");
+include("C:/wamp64/www/Tienda/conexionPHP.php");
+include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="hojaEstiloAdmin.css">
-    <link rel="stylesheet" href="hojaEstiloAdminProductos.css">
+    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdmin.css">
+    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdminProductos.css">
     <title>Panel de Administración</title>
-    <script src="productos.js"></script>
-    <script src="ocultarStock"></script>
+    <script src="/Tienda/administracionTienda/jsAdmin/productos.js"></script>
+    <script src="/tienda/administracionTienda/jsAdmin/ocultarStock.js"></script>
+    <script src="/Tienda/administracionTienda/jsAdmin/addProducto.js"></script>
+
 </head>
 <body>
     <h1 class="titulo">Alimentación San Enrique <br>ADMINISTRACIÓN</h1>
@@ -23,11 +26,11 @@ include("../verificacionUsuarioConectado.php");
           <a class="encabezado" href="stockProductos.php">&nbsp Stock Productos</a>
         <?php
           if ($usuarioConectado) {
-              echo '<a class="encabezadoCerrar agrandar" href="../cerrarSesion.php">Cerrar Sesión</a>';
+              echo '<a class="encabezadoCerrar agrandar" href="/Tienda/cerrarSesion.php">Cerrar Sesión</a>';
               echo "<a><br></a>";
               echo "<p class='bolder'>Bienvenido, $nombreUsuario</p>";
           } else {
-              echo '<a class="encabezado" href="../index.php">Iniciar Sesión</a>';
+              echo '<a class="encabezado" href="/Tienda/index.php">Iniciar Sesión</a>';
           }
         ?>
         </ul>
@@ -110,23 +113,36 @@ include("../verificacionUsuarioConectado.php");
 
     </div>
     <h2 id="anadirTitulo" style="display: none;">Añadir Producto</h2>
-    <form id="formularioAnadir" action="procesarAnadirProducto.php" method="post" style="display: none;">
-        <!-- Campos del formulario -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" required><br>
-        <label for="lote">Lote:</label>
-        <input type="number" name="lote" required><br>
-        <label for="proveedor">Proveedor:</label>
-        <input type="text" name="proveedor" required><br>
-        <label for="idProveedor">ID del Proveedor:</label>
-        <input type="text" id="idProveedor" name="idProveedor" required><br>
-        <label for="stock">Stock:</label>
-        <input type="number" name="stock" required><br>
-        <label for="precio">Precio:</label>
-        <input type="number" step="0.01" name="precio" required><br>
-        <button type="submit">Añadir Producto</button>
-    </form>
+<form id="formularioAnadir" action="procesarAnadirProducto.php" method="post" style="display: none;">
+    <!-- Campos del formulario -->
+    <label for="nombre">Nombre:</label>
+    <select name="nombre" id="nombreSelect" required>
+        <option value="" disabled selected>Selecciona un producto</option>
+        <?php foreach ($productosExistentes as $productoNombre) { ?>
+            <option value="<?php echo $productoNombre; ?>"><?php echo $productoNombre; ?></option>
+        <?php } ?>
+        <!-- Opción para agregar un nuevo producto -->
+        <option value="otro">Añadir Producto</option>
+    </select>
+    <input type="text" name="nuevoNombre" id="nuevoNombre" style="display: none;" required><br>
+    <label for="lote">Lote:</label>
+    <input type="number" name="lote" required><br>
+    <label for="proveedor">Proveedor:</label>
+    <select id="proveedorSelect" name="idProveedor" required>
+        <option value="" disabled selected>Selecciona un proveedor</option>
+        <!-- Opciones de proveedores serán llenadas por JavaScript -->
+    </select>
+    <input type="hidden" id="proveedorSeleccionado" name="proveedor" value="">
+    <label for="idProveedor">ID del Proveedor:</label>
+    <input type="text" id="idProveedor" name="idProveedor" required><br>
+    <label for="stock">Stock:</label>
+    <input type="number" name="stock" required><br>
+    <label for="precio">Precio:</label>
+    <input type="number" step="0.01" name="precio" required><br>
+    <button type="submit">Añadir Producto</button>
+</form>
+
     </div>
-    <script src="modificarProducto.js"></script>
+    <script src="/Tienda/administracionTienda/jsAdmin/modificarProducto.js"></script>
 </body>
 </html>

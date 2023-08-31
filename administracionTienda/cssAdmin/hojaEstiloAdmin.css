@@ -1,64 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap');
-/* Estilo personalizado para el título */
+
+/* Estilo para el título */
 h1.titulo,
 h3.titulo {
-    text-align: center; /* Centrar el título */
-    margin-top: 30px; /* Espacio en la parte superior del título */
-  }
-  h3.titulo {
-    text-align: center; /* Centrar el título */
-    margin-top: 30px; /* Espacio en la parte superior del título */
-  }
-  
-  /* Fondo de página en azul eléctrico tenue */
-  body {
-    background-color: #656565b0; /* Azul eléctrico tenue */
-    margin: 0; /* Eliminar margen predeterminado del cuerpo */
-    padding: 0; /* Eliminar relleno predeterminado del cuerpo */
-  }
-  .encabezado {
-    text-align: center;
-    list-style: none;
-    padding: 20px;
-    margin: 15px 20px;
-    background-color: rgba(0, 0, 0, 0.574);
-    border-top-left-radius: 400px 200px;
-    border-bottom-right-radius: 400px 200px;
+  text-align: center;
+  margin-top: 30px;
 }
-  a.encabezado {
-    background-color: #5c7a92cc;
-    margin: 15px;
-    padding: 15px;
-    text-decoration: none;
-    display: inline-block;
-    border-top-left-radius: 450px 200px;
-    border-bottom-right-radius: 100px 100px;
-    transition: transform 0.3s; /* Agregar una transición suave */
-    color: rgb(0, 0, 0);
-  }
-  a.encabezado:hover {
-    transform: scale(1.5); /* Escala la imagen al 120% en el estado de "hover" */
-    font-weight: 700;
-  }
+
+/* Fondo de página en azul eléctrico tenue */
+body {
+  background-color: #656565b0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el encabezado */
+.encabezado {
+  text-align: center;
+  list-style: none;
+  padding: 20px;
+  margin: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.574);
+  border-top-left-radius: 400px 200px;
+  border-bottom-right-radius: 400px 200px;
+}
+
+/* Estilos para los enlaces del encabezado */
+a.encabezado {
+  background-color: #5c7a92cc;
+  margin: 15px;
+  padding: 15px;
+  text-decoration: none;
+  display: inline-block;
+  border-top-left-radius: 450px 200px;
+  border-bottom-right-radius: 100px 100px;
+  transition: transform 0.3s, font-weight 0.3s;
+  color: rgb(0, 0, 0);
+}
+
+a.encabezado:hover {
+  transform: scale(1.5);
+  font-weight: 700;
+}
+
 /* Estilos para el enlace de cerrar sesión */
 .encabezadoCerrar {
-  padding: 20px;
-  background-color: #d30b0b3f;
   padding: 15px;
+  background-color: #d30b0b3f;
   text-decoration: none;
   border-radius: 100px;
   color: rgb(0, 0, 0);
-  transition: background-color 0.5s ease; /* Agregar transición de color de fondo */
+  transition: background-color 0.5s;
 }
 
 .encabezadoCerrar.agrandar {
-  display: inline-block; /* Asegura que se aplique el escalado */
+  display: inline-block;
   background-color: #c0090995;
 }
 
-/* Al pasar el cursor sobre el enlace */
 .encabezadoCerrar:hover {
   background-color: #e40707ee;
+}
+
+/* Estilos para el enlace activo con agrandamiento suave */
+.encabezadoActivo {
+  padding: 20px;
+  background-color: #2bc00995;
+  text-decoration: none;
+  border-radius: 100px;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.5s;
+}
+
+.encabezadoActivo.agrandar {
+  display: inline-block;
+  background-color: #2bc00995;
+  transform: scale(1);
+  transition: transform 0.3s, font-weight 0.3s;
+}
+
+.encabezadoActivo.agrandar:hover {
+  transform: scale(1.5);
+  font-weight: 700;
 }
 .bolder {
     font-weight: 700;

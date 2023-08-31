@@ -23,7 +23,7 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
           <a class="encabezado" href="inicioAdministracion.php">Inicio</a>
           <a class="encabezado" href="clientes.php">Clientes</a>
           <a class="encabezado" href="pedidos.php">Pedidos</a>
-          <a class="encabezado" href="stockProductos.php">&nbsp Stock Productos</a>
+          <a class="encabezadoActivo agrandar" href="stockProductos.php">&nbsp Stock Productos</a>
         <?php
           if ($usuarioConectado) {
               echo '<a class="encabezadoCerrar agrandar" href="/Tienda/cerrarSesion.php">Cerrar Sesión</a>';

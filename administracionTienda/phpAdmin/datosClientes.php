@@ -9,7 +9,6 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdmin.css">
-    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdminProductos.css">
     <title>Panel de Administración</title>
 </head>
 <body>
@@ -19,7 +18,7 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
           <a class="encabezado encabezado1" href="inicioAdministracion.php">Inicio</a>
           <a class="encabezado encabezado2" href="clientes.php">Clientes</a>
           <a class="encabezado encabezado3" href="pedidos.php">Pedidos</a>
-          <a class="encabezado encabezado4" href="stockProductos.php">&nbsp Stock Productos</a>
+          <a class="encabezado encabezado3" href="stockProductos.php">&nbsp Stock Productos</a>
         <?php
           if ($usuarioConectado) {
               echo '<a class="encabezadoCerrar agrandar" href="../../cerrarSesion.php">Cerrar Sesión</a>';
@@ -31,6 +30,5 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
         ?>
         </ul>
     </div>
-    
 </body>
 </html>

@@ -1,49 +1,17 @@
 <?php
-include("C:/wamp64/www/Tienda/conexionPHP.php");
-include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
+include("C:/wamp64/www/Tienda/administracionTienda/phpAdmin/inicioAdministracion.php"); // Incluir la plantilla base
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdmin.css">
-    <link rel="stylesheet" href="/Tienda/administracionTienda/cssAdmin/hojaEstiloAdminProductos.css">
-    <title>Panel de Administración</title>
-    <script src="/Tienda/administracionTienda/jsAdmin/productos.js"></script>
-    <script src="/tienda/administracionTienda/jsAdmin/ocultarStock.js"></script>
-    <script src="/Tienda/administracionTienda/jsAdmin/addProducto.js"></script>
-
-</head>
-<body>
-    <h1 class="titulo">Alimentación San Enrique <br>ADMINISTRACIÓN</h1>
-    <div class="menuInicio">
-        <ul class="encabezado">
-          <a class="encabezado" href="inicioAdministracion.php">Inicio</a>
-          <a class="encabezado" href="clientes.php">Clientes</a>
-          <a class="encabezado" href="pedidos.php">Pedidos</a>
-          <a class="encabezadoActivo agrandar" href="stockProductos.php">&nbsp Stock Productos</a>
-        <?php
-          if ($usuarioConectado) {
-              echo '<a class="encabezadoCerrar agrandar" href="/Tienda/cerrarSesion.php">Cerrar Sesión</a>';
-              echo "<a><br></a>";
-              echo "<p class='bolder'>Bienvenido, $nombreUsuario</p>";
-          } else {
-              echo '<a class="encabezado" href="/Tienda/index.php">Iniciar Sesión</a>';
-          }
-        ?>
-        </ul>
-        <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn">Productos</button>
-                    <div class="dropdown-content">
-                        <a href="javascript:void(0);" onclick="mostrarStockProductos()">Stock productos &nbsp;</a>
-                        <a href="javascript:void(0);" onclick="mostrarFormularioAnadir()">Añadir producto &nbsp;</a>
-                    </div>
-                </div>
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Productos</button>
+        <div class="dropdown-content">
+            <a href="javascript:void(0);" onclick="mostrarStockProductos()">Stock productos &nbsp;</a>
+            <a href="javascript:void(0);" onclick="mostrarFormularioAnadir()">Añadir producto &nbsp;</a>
         </div>
-    <div id="contenidoDinamico">
+    </div>
+</div>
+<div id="contenidoDinamico">
         <div id="ocultarStock">
         <?php
         try {
@@ -87,7 +55,6 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
         }
         ?>
         </div>
-        <!-- Código para el formulario de modificación -->
 <?php foreach ($resultados as $producto) { ?>
     <div class="formularioModificar" id="formularioModificar_<?php echo $producto['id']; ?>" style="display: none;">
         <h2>Modificar Producto</h2>
@@ -108,9 +75,7 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
             <input type="number" step="0.01" name="precio" value="<?php echo $producto['precio']; ?>" required><br>
             <button type="submit">Guardar Cambios</button>
         </form>
-    </div>
-<?php } ?>
-
+    </div><?php } ?>
     </div>
     <h2 id="anadirTitulo" style="display: none;">Añadir Producto</h2>
 <form id="formularioAnadir" action="procesarAnadirProducto.php" method="post" style="display: none;">
@@ -142,7 +107,7 @@ include("C:/wamp64/www/Tienda/verificacionUsuarioConectado.php");
     <button type="submit">Añadir Producto</button>
 </form>
 
-    </div>
-    <script src="/Tienda/administracionTienda/jsAdmin/modificarProducto.js"></script>
-</body>
-</html>
+    </div><script src="/Tienda/administracionTienda/jsAdmin/productos.js"></script>
+<script src="/tienda/administracionTienda/jsAdmin/ocultarStock.js"></script>
+<script src="/Tienda/administracionTienda/jsAdmin/addProducto.js"></script>
+<script src="/Tienda/administracionTienda/jsAdmin/modificarProducto.js"></script>
